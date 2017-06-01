@@ -6,10 +6,15 @@ MongoClient.connect('mongodb://localhost:27017/todoApi', (err, db)=>{
     }
     console.log('Connected to server');
 
-    db.collection('Todos').find({
-        _id: new ObjectID('592f70b5a5f0674811cb1b15')
-    }).toArray().then((docs) =>{
-        console.log('Todos');
+    // db.collection('Todos').find().count().then((docs) =>{
+    //     console.log('Todos');
+    //     console.log(JSON.stringify(docs, undefined, 2));
+    // }, (err) => {
+    //     console.log('Unable to fetch todos', err);
+    // });
+
+    db.collection('User').find({name: "Diamond Glass"}).toArray().then((docs) => {
+        console.log('User');
         console.log(JSON.stringify(docs, undefined, 2));
     }, (err) => {
         console.log('Unable to fetch todos', err);
