@@ -4,6 +4,7 @@
   "description": "API endpoints for todo app",
   "main": "index.js",
   "scripts": {
+    "start": "node server/server.js",
     "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
@@ -11,6 +12,9 @@
     "API",
     "Todo"
   ],
+  "engines": {
+    "node": "7.9.0"
+  },
   "author": "Dion Pettaway",
   "license": "ISC",
   "dependencies": {
